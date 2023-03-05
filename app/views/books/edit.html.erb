@@ -1,0 +1,16 @@
+<h1>Editting Book</h1>
+<%= form_with model: @list,url:update_books_path(@list.id),method: :patch do |f| %>
+    <div class="field">
+        <label for="book_title">Title</label>
+        <%= f.text_field :@lists.title %>
+        <%= @lists.title %>
+    </div>
+    <div class="field">
+        <label for="book_body">Body</label>
+        <%= f.text_area :body %>
+        <%= @lists.body %>
+    </div>
+    <div class="actions">
+        <%= f.submit'Update Book' %>
+    </div>
+<% end %>

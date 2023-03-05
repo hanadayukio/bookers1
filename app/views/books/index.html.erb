@@ -1,0 +1,36 @@
+<!--books#index-->
+<p id="notice"></p>
+<h1>Books</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Body</th>
+            <th colspan="3"></th>
+        </tr>
+    </thesd>
+    <tbody>
+        <tr><% @lists.each do |list| %>
+            <td><%= list.title %></td>
+            <td><%= list.body %></td>
+            <td><%= link_to "Show","/books/#{list.id}" %></td>
+            <td><%= link_to "Edit","/books/#{list.id}/edit" %></td>
+            <td><%= link_to "Destroy","/books/#{list.id}" %></td>
+        </tr><% end %>
+    </tbody>
+</table>
+
+<h2>New book</h2>
+<%= form_with model: @list do |f| %>
+    <div class="field">
+        <label for="book_title">Title</label>
+        <%= f.text_field :title %>
+    </div>
+    <div class="field">
+        <label for="book_body">Body</label>
+        <%= f.text_area :body %>
+    </div>
+    <div class="actions">
+        <%= f.submit'Create Book' %>
+    </div>
+<% end %>
