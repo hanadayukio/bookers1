@@ -22,13 +22,15 @@ class BooksController < ApplicationController
     end
     
     def update
-        list = Book.find(params[:id])
-        list.update(list_params)
-        redirect_to '/books'
+        @lists = Book.find(params[:id])
+        @lists.update(book_params)
+        redirect_to'/books'
     end
     
     private
+    
     def book_params
-        params.require(:book).permit(:title, :body)
+    params.require(:book).permit(:title, :body)
+    
     end
 end

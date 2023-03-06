@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ 
 body{
     background-color: #fff;
     color: #333;
@@ -25,10 +26,10 @@ body{
 h1{
     display: block;
     font-size: 2em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inrine-end: 0px;
     font-weight: bold;
 }
 
@@ -39,10 +40,10 @@ strong{
 
 p{
     display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 p, ol, ul, td{
@@ -53,7 +54,6 @@ p, ol, ul, td{
 }
 
 table{
-    width: 100%;
     display: table;
     border-collapse: separate;
     box-sizing: border-box;
@@ -99,10 +99,10 @@ td{
 h2{
     display: block;
     font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     font-weight: bold;
 }
 
@@ -117,4 +117,8 @@ form{
 
 div.field, div.actions{
     margin-bottom: 10px
+}
+
+a{
+    color: #666;
 }
