@@ -15,7 +15,7 @@
             <td><%= list.body %></td>
             <td><%= link_to "Show","/books/#{list.id}" %></td>
             <td><%= link_to "Edit","/books/#{list.id}/edit" %></td>
-            <td><%= link_to "Destroy","/books/#{list.id}" %></td>
+            <td><%= link_to "Destroy","/books/#{list.id}",method: :delete ,"data-confirm" => "Are yuo sure?"%></td>
         </tr><% end %>
     </tbody>
 </table>

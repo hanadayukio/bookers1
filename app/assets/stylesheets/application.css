@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
 body{
     background-color: #fff;
     color: #333;
@@ -21,6 +21,10 @@ body{
     font-size: 13px;
     line-height: 18px;
     margin: 33px
+}
+
+#notice{
+    color: green;
 }
 
 h1{
