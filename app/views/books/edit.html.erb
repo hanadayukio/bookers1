@@ -1,5 +1,9 @@
 <h1>Editting Book</h1>
+
 <%= form_with model: @lists do |f| %>
+    <div id="error_explanation">
+        <h2><%= flash[:alrat] %></h2>
+    </div>
     <div class="field">
         <label for="book_title">Title</label>
         <%= f.text_field :title %>
