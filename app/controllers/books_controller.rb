@@ -18,7 +18,9 @@ class BooksController < ApplicationController
                 flash[:notice] = "Book was successfully created."
                 redirect_to"/books/#{@lists.id}"
             else
-                flash[:alrat] = "2 errors prohibited this book from being saved:"
+                flash[:alrat] = "2 errors prohibited this book from being saved:
+                ・Title can't be blank
+                ・Body can't be blank"
                 redirect_to"/books"
             end
         end
@@ -33,7 +35,9 @@ class BooksController < ApplicationController
                 flash[:notice] = "Book was successfully update."
                 redirect_to"/books/#{@lists.id}"
             else
-                flash[:alrat] = "1 errors prohibited this book from being saved:"
+                flash[:alrat] = "1 errors prohibited this book from being saved:
+                ・Title can't be blank
+                ・Body can't be blank"
                 render "edit"
             end
             
